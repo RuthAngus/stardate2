@@ -50,7 +50,9 @@ def angus_2019_model_inverse(prot, bprp):
 class GP_model(object):
 
     def __init__(self):
-        gp_model = pkg_resources.resource_filename(__name__, "gp_model.pkl")
+        # gp_model = pkg_resources.resource_filename(__name__, "gp_model.pkl")
+        gp_model = pkg_resources.resource_filename(__name__,
+                                                   "gp_model_01.27.21.pkl")
         with open(gp_model, "rb") as f:
             model, map_soln = pickle.load(f)
 
